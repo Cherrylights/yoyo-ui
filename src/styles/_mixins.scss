@@ -1,0 +1,26 @@
+@mixin button-size($padding-x, $padding-y, $font-size, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+
+@mixin button-variant($background, $color) {
+  color: $color;
+  background: $background;
+  &:hover {
+    background: darken($background, 8%);
+  }
+  &:focus,
+  &.focus {
+    background: darken($background, 8%);
+  }
+  &:disabled,
+  &.disabled {
+    background: $background;
+  }
+}
+
+@mixin alert-style($background, $color) {
+  color: $color;
+  background: $background;
+}
