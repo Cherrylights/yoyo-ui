@@ -2,15 +2,17 @@ import React from 'react';
 import Menu from './components/Menu/Menu';
 import MenuItem from './components/Menu/MenuItem';
 import SubMenu from './components/Menu/SubMenu';
+import Icon from './components/Icon/Icon';
 
 function App() {
   return (
     <div style={{ padding: '20px' }}>
+      <Icon theme="success" icon="arrow-down" />
       <Menu
+        // mode="vertical"
         onSelect={(index) => {
           console.log(index);
         }}
-        mode="vertical"
       >
         <MenuItem>Active</MenuItem>
         <MenuItem disabled>Disabled</MenuItem>

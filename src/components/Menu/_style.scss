@@ -36,7 +36,7 @@
   }
   .arrow-icon {
     transition: transform 0.25s ease-in-out;
-    margin-left: 3px;
+    margin-left: 5px;
   }
   &:hover {
     .arrow-icon {
@@ -56,11 +56,10 @@
 }
 
 .submenu {
-  display: none;
   list-style: none;
   padding-left: 0;
   white-space: nowrap;
-  transition: $menu-transition;
+  // transition: $menu-transition;
   .menu-item {
     border: none;
     padding: $menu-item-padding-y $menu-item-padding-x;
@@ -75,7 +74,7 @@
   }
 }
 .menu-opened {
-  display: block;
+  // display: block;
 }
 
 .menu-horizontal {
