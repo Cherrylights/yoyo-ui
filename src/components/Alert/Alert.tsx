@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import Icon from '../Icon/Icon';
 
 type AlertVariant = 'success' | 'default' | 'danger' | 'warning';
 
@@ -9,6 +11,7 @@ interface AlertProps {
   message: string;
   className?: string;
   closable?: boolean;
+  icon?: IconProp;
   onClose?: () => void;
 }
 
@@ -20,6 +23,7 @@ const Alert: React.FC<AlertProps> = (props) => {
     message,
     closable,
     onClose,
+    icon,
     ...restProps
   } = props;
   const classes = classnames('alert', className, {
@@ -36,7 +40,8 @@ const Alert: React.FC<AlertProps> = (props) => {
   if (!close) {
     return (
       <div className={classes} {...restProps}>
-        {title && <span className="alert-title">{title}</span>}
+        {icon && <Icon icon={icon} className="alert-icon" />}
+        {title && <h4 className="alert-title">{title}</h4>}
         <div className="alert-message">{message}</div>
         {closable && (
           <span className="alert-close" onClick={handleClose}>

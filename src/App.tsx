@@ -3,6 +3,7 @@ import Menu from './components/Menu/Menu';
 import MenuItem from './components/Menu/MenuItem';
 import SubMenu from './components/Menu/SubMenu';
 import Icon from './components/Icon/Icon';
+import Input from './components/Input/Input';
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
         </SubMenu>
         <MenuItem>Sonos</MenuItem>
       </Menu>
+      <Input
+        onChange={(e) => {
+          console.log(e.target.value);
+        }}
+      ></Input>
     </div>
   );
 }

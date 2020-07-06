@@ -62,11 +62,13 @@ const Menu: React.FC<IMenuProps> = (props) => {
   };
 
   return (
-    <ul className={classes} style={style} data-testid="test-menu">
-      <MenuContext.Provider value={passedContext}>
-        {renderChildren()}
-      </MenuContext.Provider>
-    </ul>
+    <nav>
+      <ul className={classes} style={style} data-testid="test-menu">
+        <MenuContext.Provider value={passedContext}>
+          {renderChildren()}
+        </MenuContext.Provider>
+      </ul>
+    </nav>
   );
 };
 

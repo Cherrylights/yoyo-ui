@@ -21,11 +21,15 @@ $alert-colors: (
   .alert-title {
     font-weight: $font-weight-bold;
     font-size: $font-size-large;
-    display: inline-block;
     margin-bottom: $alert-title-bottom-margin;
   }
   .alert-message {
     font-size: $alert-message-font-size;
+    display: inline;
+  }
+  .alert-icon {
+    display: inline;
+    margin-right: $alert-margin-bottom;
   }
 }
 
